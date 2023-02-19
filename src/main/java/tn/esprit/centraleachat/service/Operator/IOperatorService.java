@@ -1,5 +1,6 @@
 package tn.esprit.centraleachat.service.Operator;
 
+import tn.esprit.centraleachat.entity.Consumer;
 import tn.esprit.centraleachat.entity.Operator;
 import tn.esprit.centraleachat.entity.Operator;
 
@@ -12,4 +13,8 @@ public interface IOperatorService {
     public Operator UpdateOperator(Operator operator) ;
     public void deleteOperator(int idOperator) ;
     public Operator findByIdOperator(int idOperator) throws  Exception ;
+    public Operator findByEmailOp(String email);
+    public Operator findByPassword(String password);
+    public Operator findByNameOp(String nom);
+    public Operator findByCinOp(String cin);
 }

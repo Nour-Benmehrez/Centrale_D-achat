@@ -40,4 +40,24 @@ public class OperatorService implements IOperatorService {
     public Operator findByIdOperator(int idOperator) throws  Exception {
         return operatorRepository.findById(idOperator).orElseThrow(()-> new Exception("Operator n'existe pas"))  ;
     }
+
+    @Override
+    public Operator findByEmailOp(String email) {
+        return operatorRepository.findByEmailOp(email);
+    }
+
+    @Override
+    public Operator findByPassword(String password) {
+        return operatorRepository.findByPassword(password);
+    }
+
+    @Override
+    public Operator findByNameOp(String nom) {
+        return operatorRepository.findByNameOp(nom);
+    }
+
+    @Override
+    public Operator findByCinOp(String cin) {
+        return operatorRepository.findByCinOp(cin);
+    }
 }
